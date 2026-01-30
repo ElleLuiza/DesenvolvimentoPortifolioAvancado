@@ -1,140 +1,122 @@
-/* ================= VARIÁVEIS ================= */
 :root {
-  --blue: #cfe8f3;
-  --pink: #f6d6e8;
-  --white: #ffffff;
-  --text: #1f2933;
+  --bg: #ffffff;
+  --blue: #dbeafe;
+  --pink: #fde2f3;
+  --text: #0f172a;
 }
 
-/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ================= BASE ================= */
 body {
   font-family: 'Inter', sans-serif;
+  background: var(--bg);
   color: var(--text);
-  background: var(--white);
-  line-height: 1.6;
 }
 
 section {
-  padding: 6rem 0;
+  padding: 8rem 0;
 }
 
-/* ================= HERO ================= */
 .hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
   background: linear-gradient(120deg, var(--blue), var(--pink));
-  padding: 8rem 0;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
 }
 
 .hero h2 {
-  font-size: 1.5rem;
   font-weight: 400;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 }
 
 .hero p {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* ================= ABOUT ================= */
-.about-text {
-  max-width: 900px;
+  max-width: 720px;
   margin: auto;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
-.about-text p {
-  margin-bottom: 2rem;
+.about p {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  font-size: 1.3rem;
 }
 
-/* ================= SKILLS ================= */
-.skill-card {
+.skills a {
   display: block;
-  padding: 2rem;
+  padding: 3rem;
   background: var(--blue);
+  border-radius: 20px;
   text-align: center;
-  border-radius: 12px;
+  font-weight: 600;
   text-decoration: none;
   color: var(--text);
-  transition: transform 0.3s ease;
+  transition: transform .3s, box-shadow .3s;
 }
 
-.skill-card:hover {
-  transform: translateY(-6px);
+.skills a:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,.08);
 }
 
-/* ================= PORTFOLIO ================= */
-.portfolio-card {
-  padding: 2rem;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
+.card {
+  padding: 3rem;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,.05);
 }
 
-/* ================= SERVICES ================= */
-.service-item {
-  border-bottom: 1px solid #e5e7eb;
-  padding: 1.5rem 0;
+details {
+  margin-bottom: 1.5rem;
+}
+
+summary {
+  font-size: 1.2rem;
+  font-weight: 600;
   cursor: pointer;
 }
 
-.service-content {
-  display: none;
-  padding-top: 1rem;
-}
-
-/* ================= PRICING ================= */
 table {
   width: 100%;
   border-collapse: collapse;
 }
 
-th, td {
-  padding: 1rem;
+td, th {
+  padding: 1.2rem;
   border-bottom: 1px solid #e5e7eb;
-  text-align: left;
 }
 
-/* ================= CONTACT ================= */
-.contact h2 {
-  margin-bottom: 2rem;
-}
-
-.contact-links a {
-  margin-right: 1.5rem;
-}
-
-form {
-  margin-top: 2rem;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
-
-button {
-  padding: 1rem 2rem;
-  background: var(--blue);
-  border: none;
-  cursor: pointer;
-}
-
-/* ================= FOOTER ================= */
-footer {
-  padding: 3rem 0;
+.contact {
   text-align: center;
-  background: #f9fafb;
+}
+
+.contact a {
+  margin: 0 1rem;
+  font-weight: 600;
+}
+
+footer {
+  padding: 3rem;
+  text-align: center;
+  background: #f8fafc;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
