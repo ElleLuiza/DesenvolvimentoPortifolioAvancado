@@ -1,10 +1,11 @@
-function toggleService(element) {
-  const content = element.querySelector('.service-content');
-  const isOpen = content.style.display === 'block';
+const reveals = document.querySelectorAll('.reveal');
 
-  document.querySelectorAll('.service-content').forEach(item => {
-    item.style.display = 'none';
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    }
   });
+}, { threshold: 0.15 });
 
-  content.style.display = isOpen ? 'none' : 'block';
-}
+reveals.forEach(r => observer.observe(r));
