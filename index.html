@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -15,20 +16,21 @@
 
 <body>
 
-<header class="hero reveal">
-  <div class="container">
-    <h1>Gabrielle Luiza da Silva</h1>
-    <h2>
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="container hero-inner">
+    <h1 class="fade">Gabrielle<br>Luiza da Silva</h1>
+    <h2 class="fade delay-1">
       Analista de Sales Ops · Desenvolvedora Full Stack · Especialista em IA
     </h2>
-    <p>
+    <p class="fade delay-2">
       Transformando complexidade em processos claros, mensuráveis e acionáveis.
       Construindo operações comerciais escaláveis com tecnologia e dados.
     </p>
   </div>
 </header>
 
-<section class="about reveal">
+<section class="about section fade">
   <div class="container">
     <p>
       Sou Analista de Sales Operations, especialista em uso estratégico de Inteligência Artificial
@@ -42,58 +44,78 @@
     </p>
     <p>
       Trabalho na interseção entre estratégia, tecnologia e execução, apoiando empresas na
-      construção de operações comerciais escaláveis.
+      construção de operações comerciais escaláveis, times mais produtivos e decisões orientadas
+      por dados.
     </p>
   </div>
 </section>
 
-<section class="skills reveal">
+<section class="skills section fade">
   <div class="container">
     <div class="row g-4">
-      <div class="col-6 col-md-3"><a href="https://hubspot.com" target="_blank">HubSpot</a></div>
-      <div class="col-6 col-md-3"><a href="https://openai.com" target="_blank">OpenAI</a></div>
-      <div class="col-6 col-md-3"><a href="https://powerbi.microsoft.com" target="_blank">Power BI</a></div>
-      <div class="col-6 col-md-3"><a href="https://developer.mozilla.org" target="_blank">JavaScript</a></div>
-      <div class="col-6 col-md-3"><a href="https://developer.mozilla.org" target="_blank">HTML</a></div>
-      <div class="col-6 col-md-3"><a href="https://github.com" target="_blank">GitHub</a></div>
-      <div class="col-6 col-md-3"><a href="https://python.org" target="_blank">Python</a></div>
+      <div class="col-6 col-md-3"><a href="https://hubspot.com" target="_blank" class="skill">HubSpot</a></div>
+      <div class="col-6 col-md-3"><a href="https://openai.com" target="_blank" class="skill">OpenAI</a></div>
+      <div class="col-6 col-md-3"><a href="https://powerbi.microsoft.com" target="_blank" class="skill">Power BI</a></div>
+      <div class="col-6 col-md-3"><a href="https://developer.mozilla.org" target="_blank" class="skill">JavaScript</a></div>
+      <div class="col-6 col-md-3"><a href="https://developer.mozilla.org" target="_blank" class="skill">HTML</a></div>
+      <div class="col-6 col-md-3"><a href="https://github.com" target="_blank" class="skill">GitHub</a></div>
+      <div class="col-6 col-md-3"><a href="https://python.org" target="_blank" class="skill">Python</a></div>
     </div>
   </div>
 </section>
 
-<section class="portfolio reveal">
+<section class="portfolio section fade">
   <div class="container">
     <div class="row g-4">
-      <div class="col-md-4"><div class="card">Estruturação de Equipe Comercial</div></div>
-      <div class="col-md-4"><div class="card">Criação de Marca e Estruturação HYPE</div></div>
-      <div class="col-md-4"><div class="card">Treinamento de Lideranças</div></div>
+      <div class="col-md-4">
+        <div class="card">
+          <h3>Estruturação de Equipe Comercial</h3>
+          <p>Descrição editável do projeto.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <h3>Criação de Marca e Estruturação HYPE</h3>
+          <p>Descrição editável do projeto.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <h3>Treinamento de Lideranças</h3>
+          <p>Descrição editável do projeto.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="services reveal">
+<section class="services section fade">
   <div class="container">
-    <details><summary>Estruturação comercial</summary><p>Texto editável</p></details>
-    <details><summary>Criação de sites</summary><p>Texto editável</p></details>
-    <details><summary>Treinamentos IA</summary><p>Texto editável</p></details>
-    <details><summary>Power BI</summary><p>Texto editável</p></details>
-    <details><summary>Análise de mercado</summary><p>Texto editável</p></details>
-    <details><summary>Metodologia EOS</summary><p>Texto editável</p></details>
+    <div class="service">Estruturação comercial</div>
+    <div class="service">Criação de sites e apresentações</div>
+    <div class="service">Treinamentos de IA</div>
+    <div class="service">Dashboards Power BI</div>
+    <div class="service">Análise de mercado</div>
+    <div class="service">Metodologia EOS</div>
   </div>
 </section>
 
-<section class="pricing reveal">
+<section class="pricing section fade">
   <div class="container">
     <table>
-      <tr><th>Categoria</th><th>Descrição</th><th>Valor</th></tr>
-      <tr><td>Consultoria</td><td>Diagnóstico + Mentoria</td><td>R$ XX.XXX</td></tr>
-      <tr><td>Estruturação</td><td>CRM + Funil</td><td>R$ XX.XXX</td></tr>
-      <tr><td>Desenvolvimento</td><td>Sites e Dashboards</td><td>R$ XX.XXX</td></tr>
+      <thead>
+        <tr><th>Categoria</th><th>Descrição</th><th>Valor</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Consultoria</td><td>Diagnóstico + Mentorias</td><td>R$ XX.XXX</td></tr>
+        <tr><td>Estruturação</td><td>CRM, Funil, Playbooks</td><td>R$ XX.XXX</td></tr>
+        <tr><td>Desenvolvimento</td><td>Sites e Dashboards</td><td>R$ XX.XXX</td></tr>
+      </tbody>
     </table>
   </div>
 </section>
 
-<section class="contact reveal">
+<section class="contact section fade">
   <div class="container">
     <h3>Vamos conversar</h3>
     <a href="mailto:gabiluiz4adm@outlook.com">Email</a>
