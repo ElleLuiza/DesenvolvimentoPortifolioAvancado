@@ -1,8 +1,10 @@
+/* css/style.css */
 :root {
   --bg: #ffffff;
   --blue: #dbeafe;
   --pink: #fde2f3;
   --text: #0f172a;
+  --muted: #475569;
 }
 
 * {
@@ -15,74 +17,93 @@ body {
   font-family: 'Inter', sans-serif;
   background: var(--bg);
   color: var(--text);
+  line-height: 1.6;
 }
 
-section {
-  padding: 8rem 0;
+.section {
+  padding: 10rem 0;
 }
 
 .hero {
+  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(120deg, var(--blue), var(--pink));
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, var(--blue), transparent 60%),
+    radial-gradient(circle at 80% 70%, var(--pink), transparent 60%);
+  z-index: -1;
+}
+
+.hero-inner {
   text-align: center;
 }
 
 .hero h1 {
-  font-size: clamp(3rem, 6vw, 5rem);
+  font-size: clamp(4rem, 8vw, 7rem);
   font-weight: 900;
+  line-height: 1;
 }
 
 .hero h2 {
+  margin-top: 2rem;
   font-weight: 400;
-  margin: 2rem 0;
+  font-size: 1.4rem;
+  color: var(--muted);
 }
 
 .hero p {
-  max-width: 720px;
-  margin: auto;
+  margin: 3rem auto 0;
+  max-width: 760px;
   font-size: 1.1rem;
 }
 
 .about p {
-  max-width: 900px;
-  margin: 0 auto 2rem;
-  font-size: 1.3rem;
+  max-width: 920px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.35rem;
 }
 
-.skills a {
+.skill {
   display: block;
-  padding: 3rem;
-  background: var(--blue);
-  border-radius: 20px;
+  padding: 3.5rem 2rem;
+  border-radius: 28px;
+  background: linear-gradient(135deg, var(--blue), var(--pink));
   text-align: center;
   font-weight: 600;
   text-decoration: none;
   color: var(--text);
-  transition: transform .3s, box-shadow .3s;
+  transition: transform .4s ease, box-shadow .4s ease;
 }
 
-.skills a:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0,0,0,.08);
+.skill:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0,0,0,.12);
 }
 
 .card {
-  padding: 3rem;
-  border-radius: 20px;
+  padding: 4rem 3rem;
+  border-radius: 32px;
   background: #fff;
-  box-shadow: 0 10px 30px rgba(0,0,0,.05);
+  box-shadow: 0 30px 80px rgba(0,0,0,.08);
+  transition: transform .4s ease;
 }
 
-details {
-  margin-bottom: 1.5rem;
+.card:hover {
+  transform: translateY(-12px);
 }
 
-summary {
-  font-size: 1.2rem;
+.service {
+  padding: 2.5rem 0;
+  font-size: 1.6rem;
   font-weight: 600;
-  cursor: pointer;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 table {
@@ -90,8 +111,8 @@ table {
   border-collapse: collapse;
 }
 
-td, th {
-  padding: 1.2rem;
+th, td {
+  padding: 1.4rem;
   border-bottom: 1px solid #e5e7eb;
 }
 
@@ -99,24 +120,29 @@ td, th {
   text-align: center;
 }
 
+.contact h3 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+
 .contact a {
-  margin: 0 1rem;
+  margin: 0 1.5rem;
   font-weight: 600;
+  text-decoration: none;
 }
 
 footer {
-  padding: 3rem;
+  padding: 4rem 0;
   text-align: center;
   background: #f8fafc;
 }
 
-.reveal {
+/* Animations */
+.fade {
   opacity: 0;
-  transform: translateY(40px);
-  transition: all 1s ease;
+  transform: translateY(60px);
+  transition: all 1.2s cubic-bezier(.16,1,.3,1);
 }
 
-.reveal.active {
+.fade.show {
   opacity: 1;
-  transform: translateY(0);
-}
